@@ -11,7 +11,7 @@ RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true 
     && apt-get install -y oracle-java8-installer \
     && apt-get clean \
     && apt-get autoclean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/* \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/archives/*.deb /var/cache/apt/archives/partials/* \
     && rm -rf /usr/lib/jvm/java-8-oracle/*src.zip \
               /usr/lib/jvm/java-8-oracle/lib/missioncontrol \
               /usr/lib/jvm/java-8-oracle/lib/visualvm \
